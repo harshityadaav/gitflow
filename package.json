@@ -1,0 +1,21 @@
+{
+  "name": "gitflow",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000g\u0000i\u0000t\u0000f\u0000l\u0000o\u0000w\u0000 \u0000 \u0000",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server/server.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
