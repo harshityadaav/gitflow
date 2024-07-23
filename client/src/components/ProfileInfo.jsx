@@ -3,26 +3,12 @@ import { RiGitRepositoryFill, RiUserFollowFill, RiUserFollowLine } from "react-i
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiThought } from "react-icons/tfi";
 import { FaEye } from "react-icons/fa";
-// import { formatMemberSince } from "../utils/functions";
-// import LikeProfile from "./LikeProfile";
+import { formatMemberSince } from "../utils/functions";
+import LikeProfile from "./LikeProfile";
 
 const ProfileInfo = ({ userProfile }) => {
-	// const userProfile = {
-	// 	avatar_url: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745",
-	// 	bio: "👨🏻‍💻👨🏻‍💻👨🏻‍💻",
-	// 	email: "johndoe@gmail.com",
-	// 	followers: 100,
-	// 	following: 200,
-	// 	html_url: "https://github.com/harshityadaav",
-	// 	location: "Somewhere, Earth",
-	// 	name: "John Doe",
-	// 	public_gists: 100,
-	// 	public_repos: 100,
-	// 	twitter_username: "johndoe",
-	// 	login: "johndoe",
-	// };
 
-	// const memberSince = formatMemberSince(userProfile?.created_at);
+	const memberSince = formatMemberSince(userProfile?.created_at);
 
 	return (
 		<div className='lg:w-1/3 w-full flex flex-col gap-2 lg:sticky md:top-10'>
@@ -35,7 +21,7 @@ const ProfileInfo = ({ userProfile }) => {
 					{/* View on Github */}
 
 					<div className='flex gap-2 items-center flex-col'>
-						{/* <LikeProfile userProfile={userProfile} /> */}
+						<LikeProfile userProfile={userProfile} />
 						<a
 							href={userProfile?.html_url}
 							target='_blank'

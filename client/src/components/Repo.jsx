@@ -1,11 +1,11 @@
 import { FaCodeBranch, FaCopy, FaRegStar } from "react-icons/fa";
 import { FaCodeFork } from "react-icons/fa6";
-// import { formatDate } from "../utils/functions";
-// import { PROGRAMMING_LANGUAGES } from "../utils/constants";
+import { formatDate } from "../utils/functions";
+import { PROGRAMMING_LANGUAGES } from "../utils/constants";
 import toast from "react-hot-toast";
 
 const Repo = ({ repo }) => {
-	// const formattedDate = formatDate(repo.created_at);
+	const formattedDate = formatDate(repo.created_at);
 
 	const handleCloneClick = async (repo) => {
 		try {
@@ -58,14 +58,14 @@ const Repo = ({ repo }) => {
 				className='block my-1 text-xs font-normal leading-none
      text-gray-400'
 			>
-				{/* Released on {formattedDate} */}
+				Released on {formattedDate}
 			</time>
 			<p className='mb-4 text-base font-normal text-gray-500'>
 				{repo.description ? repo.description.slice(0, 500) : "No description provided"}
 			</p>
-			{/* {PROGRAMMING_LANGUAGES[repo.language] ? (
+			{PROGRAMMING_LANGUAGES[repo.language] ? (
 				<img src={PROGRAMMING_LANGUAGES[repo.language]} alt='Programming language icon' className='h-8' />
-			) : null} */}
+			) : null}
 		</li>
 	);
 };
