@@ -4,7 +4,9 @@
   "description": "��#\u0000 \u0000g\u0000i\u0000t\u0000f\u0000l\u0000o\u0000w\u0000 \u0000 \u0000",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon server/server.js",
+    "build": "npm install && ipm install --prefix client npm run build --prefix client",
+    "start": "node server/index.js"
   },
   "type": "module",
   "author": "",
